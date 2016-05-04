@@ -230,12 +230,13 @@ try
 			$iTotalErrors += $iCountAllErrors;
 			$iTotalWarnings += $iCountAllWarnings;
 			$iPeakMemory = max($iPeakMemory, $oLastLog->Get('memory_usage_peak'));
-			
+
+			$aRow['@class'] = HILIGHT_CLASS_OK;
 			if ($iCountAllErrors > 0)
 			{
 				$aRow['@class'] = HILIGHT_CLASS_CRITICAL;
 			}
-			else if ($iTotalWarnings > 0)
+			else if ($iCountAllWarnings > 0)
 			{
 				$aRow['@class'] = HILIGHT_CLASS_WARNING;
 			}
