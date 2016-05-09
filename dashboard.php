@@ -187,6 +187,8 @@ try
 	$iPeakMemory = 0;
 	$iTotalDuration = 0;
 	$iTotalDataSources = 0;
+
+	$sReplicaSyncURl = utils::GetAbsoluteUrlAppRoot().'synchro/synchro_exec.php';
 	
 	while($oSDS = $oSDSSet->Fetch())
 	{
@@ -196,7 +198,6 @@ try
 		$iDSid = $oSDS->GetKey();
 		
 		$sReplicaURl = utils::GetAbsoluteUrlAppRoot().'synchro/replica.php';
-		$sReplicaSyncURl = utils::GetAbsoluteUrlAppRoot().'synchro/synchro_exec.php';
 		
 		$aRow = array('name' => $oSDS->GetHyperlink());
 		if ($oSetSynchroLog->Count() > 0)
@@ -232,8 +233,7 @@ try
 			$iTotalWarnings += $iCountAllWarnings;
 			$iPeakMemory = max($iPeakMemory, $oLastLog->Get('memory_usage_peak'));
 
-			// Adds URL to execute sync manually
-			$aRow['sync'] = "<a href=\"{$sReplicaSyncURl}?data_sources=$iDSid\">".Dict::S('UI:SynchroDashboard:ExecSync')."</a>";
+
 
 			$aRow['@class'] = HILIGHT_CLASS_OK;
 			if ($iCountAllErrors > 0)
@@ -254,6 +254,8 @@ try
 			$aRow['warnings'] = '&nbsp;';
 			$aRow['peak_memory'] = '&nbsp;';
 		}
+		// Adds URL to execute sync manually
+		$aRow['sync'] = "<a href=\"{$sReplicaSyncURl}?data_sources=$iDSid\">".Dict::S('UI:SynchroDashboard:ExecSync')."</a>";
 		$aData[] = $aRow;
 		$iTotalDataSources++;
 	}
