@@ -21,8 +21,8 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'UI:SynchroDashboard:NbOfWarnings+' => 'Nombre d\'avertissements détectés durant la dernière exécution',
 	'UI:SynchroDashboard:PeakMemoryUsage' => 'Mémoire Max.',
 	'UI:SynchroDashboard:PeakMemoryUsage+' => 'Quantité maximale de mémoire utilisée durant la dernière exécution',
-	'UI:SynchroDashboard:PeakMemoryUsage' => 'Exécuter',
-	'UI:SynchroDashboard:PeakMemoryUsage+' => 'Exécute la synchronisation pour la source de données',
+	'UI:SynchroDashboard:ExecSync' => 'Exécuter',
+	'UI:SynchroDashboard:ExecSync+' => 'Exécute la synchronisation pour la source de données',
 	// Tab labels
 	'UI:SynchroDashboard:Overview:LatestRun' => 'Dernière exécution',
 	'UI:SynchroDashboard:Overview:DataSources' => 'Sources de Données',

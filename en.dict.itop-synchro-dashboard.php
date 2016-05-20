@@ -21,8 +21,8 @@ Dict::Add('EN US', 'English', 'English', array(
 	'UI:SynchroDashboard:NbOfWarnings+' => 'Number of warnings encountered during the latest run',
 	'UI:SynchroDashboard:PeakMemoryUsage' => 'Peak Memory Usage',
 	'UI:SynchroDashboard:PeakMemoryUsage+' => 'Maximum amount of memory used during the synchronization',
-	'UI:SynchroDashboard:PeakMemoryUsage' => 'Execute',
-	'UI:SynchroDashboard:PeakMemoryUsage+' => 'Execute the synchronization',
+	'UI:SynchroDashboard:ExecSync' => 'Execute',
+	'UI:SynchroDashboard:ExecSync+' => 'Execute the synchronization',
 	// Tab labels
 	'UI:SynchroDashboard:Overview:LatestRun' => 'Latest Run',
 	'UI:SynchroDashboard:Overview:DataSources' => 'Data Sources',
