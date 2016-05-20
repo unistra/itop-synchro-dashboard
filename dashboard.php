@@ -187,6 +187,8 @@ try
 	$iPeakMemory = 0;
 	$iTotalDuration = 0;
 	$iTotalDataSources = 0;
+
+	$sReplicaSyncURl = utils::GetAbsoluteUrlAppRoot().'synchro/synchro_exec.php';
 	
 	while($oSDS = $oSDSSet->Fetch())
 	{
@@ -231,6 +233,8 @@ try
 			$iTotalWarnings += $iCountAllWarnings;
 			$iPeakMemory = max($iPeakMemory, $oLastLog->Get('memory_usage_peak'));
 
+
+
 			$aRow['@class'] = HILIGHT_CLASS_OK;
 			if ($iCountAllErrors > 0)
 			{
@@ -250,6 +254,8 @@ try
 			$aRow['warnings'] = '&nbsp;';
 			$aRow['peak_memory'] = '&nbsp;';
 		}
+		// Adds URL to execute sync manually
+		$aRow['sync'] = "<a href=\"{$sReplicaSyncURl}?data_sources=$iDSid\">".Dict::S('UI:SynchroDashboard:ExecSync')."</a>";
 		$aData[] = $aRow;
 		$iTotalDataSources++;
 	}
@@ -261,6 +267,7 @@ try
 		'errors' => array('label' => Dict::S('UI:SynchroDashboard:NbOfErrors'), 'description' => Dict::S('UI:SynchroDashboard:NbOfErrors+')),
 		'warnings' => array('label' => Dict::S('UI:SynchroDashboard:NbOfWarnings'), 'description' => Dict::S('UI:SynchroDashboard:NbOfWarnings+')),
 		'peak_memory' => array('label' => Dict::S('UI:SynchroDashboard:PeakMemoryUsage'), 'description' => Dict::S('UI:SynchroDashboard:PeakMemoryUsage+')),
+		'sync' => array('label' => Dict::S('UI:SynchroDashboard:ExecSync'), 'description' => Dict::S('UI:SynchroDashboard:ExecSync+')),
 	);
 	
 	$oP->add_style('.stats-container { margin-left: auto; margin-right: auto; width: 900px; vertical-align: bottom; }');
