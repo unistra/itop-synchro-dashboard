@@ -275,7 +275,7 @@ try
 	$oP->add_style('.badge_label { font-size: 0.6em; color: #999; margin-bottom: 20px; margin-top: -10px; }');
 	$oP->add_style('.badge_number { position: relative; top: 50%; transform: translateY(-50%); }');
 	$oP->add_linked_script(utils::GetAbsoluteUrlAppRoot().'itop-synchro-dashboard/js/raphael-2.1.4.min.js');
-	$oP->add_linked_script(utils::GetAbsoluteUrlModulesRoot().'itop-synchro-dashboard/js/justgage.min.js');
+	$oP->add_linked_script(utils::GetAbsoluteUrlModulesRoot().'itop-synchro-dashboard/js/justgage.js');
 	
 	$oP->AddTabContainer('main');
 	$oP->SetCurrentTabContainer('main');
