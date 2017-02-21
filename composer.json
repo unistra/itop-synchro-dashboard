@@ -1,0 +1,12 @@
+{
+  "name": "itop/itop-synchro-dashboard",
+  "description": "iTop - Synchro Dashboard : Simple Dashboard for monitoring all the data synchro sources at a glance.",
+  "type": "itop-extension",
+  "autoload": {
+    "psr-0": {
+    }
+  },
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
