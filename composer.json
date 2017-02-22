@@ -1,12 +1,16 @@
 {
-  "name": "itop/itop-synchro-dashboard",
+  "name": "gafhyb/itop-synchro-dashboard",
   "description": "iTop - Synchro Dashboard : Simple Dashboard for monitoring all the data synchro sources at a glance.",
   "type": "itop-extension",
   "autoload": {
-    "psr-0": {
+    "psr-4": {
+      "Composer\\Installers\\": "src/Composer/Installers"
     }
   },
   "require": {
-    "composer/installers": "~1.0"
-  }
+    "gafhyb/itop-installer": "1.0",
+    "gafhyb/justgage": "~1.2"
+  },
+  "repositories": [
+  ]
 }
