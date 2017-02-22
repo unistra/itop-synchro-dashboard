@@ -1,5 +1,5 @@
 {
-  "name": "gafhyb/itop-synchro-dashboard",
+  "name": "unistra/itop-synchro-dashboard",
   "description": "iTop - Synchro Dashboard : Simple Dashboard for monitoring all the data synchro sources at a glance.",
   "type": "itop-extension",
   "autoload": {
