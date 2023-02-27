@@ -8,9 +8,13 @@
     }
   },
   "require": {
-    "gafhyb/itop-installer": "1.0",
+    "gafhyb/itop-installer": ">1.0",
     "gafhyb/justgage": "~1.2"
   },
-  "repositories": [
-  ]
+  "repositories": [],
+  "config": {
+    "allow-plugins": {
+      "gafhyb/itop-installer": true
+    }
+  }
 }
